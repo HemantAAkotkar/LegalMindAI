@@ -1,0 +1,28 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0B1120;
+  
+  color: #e2e8f0;
+}
+
+.auth-card {
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid #334155;
+  backdrop-filter: blur(10px);
+}
+
+.input-field {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.input-field:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #38bdf8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.court-bg {
+  background-color: #2a3758;
+}

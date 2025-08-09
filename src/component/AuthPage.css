@@ -1,0 +1,44 @@
+/* Container centers vertically and horizontally */
+.authpage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background-color: #0b1120;
+  font-family: 'Inter', sans-serif;
+  color: #e2e8f0;
+}
+
+/* Wrapper for fixed max-width and vertical stack */
+.authpage-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo at top, centered */
+.authpage-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.logo-highlight {
+  color: #38bdf8; /* sky blue */
+}
+
+/* Card styling */
+.authpage-card {
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid #334155;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem 2.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}

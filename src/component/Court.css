@@ -1,0 +1,70 @@
+.Court-card {
+  width: 280px;
+    background-color: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Court-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Head Section */
+.Court-card .head {
+  text-align: center; /* Centers text and image */
+  padding: 20px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.Court-card .head img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+.Court-card .head h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.Court-card .head p {
+  font-size: 14px;
+  color: #969393;
+}
+
+/* Element Section */
+.Court-card .element {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 10px;
+}
+
+.Court-card .pending,
+.Court-card .disposed {
+  text-align: center;
+}
+
+.Court-card .pending p:first-child,
+.Court-card .disposed p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff9800; /* Orange for numbers */
+}
+
+.Court-card .disposed p:first-child {
+  color: #4caf50; /* Green for disposed numbers */
+}
+
+.Court-card .pending p:last-child,
+.Court-card .disposed p:last-child {
+  font-size: 13px;
+  color: #b9b3b3;
+}
