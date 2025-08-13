@@ -24,12 +24,12 @@ const TestCasePage = ({ username, currentCase, testMode, onEndSession }) => {
 
     const scrollToBottom = () => transcriptEndRef.current?.scrollIntoView({ behavior: "smooth" });
     useEffect(scrollToBottom, [transcript]);
-    
+
     // ... (rest of the logic for speech recognition and submitting arguments would go here)
 
     return (
         <div className="simulation-container">
-             <div className="simulation-grid">
+            <div className="simulation-grid">
                 <div className="panel case-details-panel">
                     <h2 className="panel-title">Case Details</h2>
                     <div className="panel-content">
@@ -43,11 +43,10 @@ const TestCasePage = ({ username, currentCase, testMode, onEndSession }) => {
                     <h2 className="panel-title">Court Transcript</h2>
                     <div className="transcript-content">
                         {transcript.map((entry, index) => (
-                            <div key={index} className={`bubble ${
-                                entry.speaker === 'You' ? 'bubble-user' :
+                            <div key={index} className={`bubble ${entry.speaker === 'You' ? 'bubble-user' :
                                 entry.speaker === 'Opponent Lawyer' ? 'bubble-opponent' :
-                                'bubble-judge'
-                            }`}>
+                                    'bubble-judge'
+                                }`}>
                                 <p className="bubble-speaker">{entry.speaker}</p>
                                 <p className="bubble-text">{entry.text}</p>
                             </div>
@@ -71,7 +70,7 @@ const TestCasePage = ({ username, currentCase, testMode, onEndSession }) => {
                 </div>
             </div>
             {showVerdict && (
-                 <div className="modal-overlay">
+                <div className="modal-overlay">
                     <div className="modal-content">
                         <h2 className="modal-title">Session Complete!</h2>
                         <div className="grade-container">
@@ -106,9 +105,19 @@ export default function Practices({ username, onLogout }) {
         // This is a mock API call for demonstration
         setTimeout(() => {
             setCases([
-                { id: 1, title: "The Collapsing Balcony", description: "Analyze the chain of negligence.", subject: "Law of Torts", difficulty: "Hard", facts: "A balcony collapsed...", yourRole: "Plaintiff's Counsel" },
-                { id: 2, title: "The Ambiguous Email Offer", description: "Was a valid contract formed?", subject: "Contract Act", difficulty: "Medium", facts: "An email was sent...", yourRole: "Plaintiff's Counsel" },
-                { id: 3, title: "Theft by Trick", description: "Distinguish between theft and deception.", subject: "Indian Penal Code", difficulty: "Easy", facts: "A valuable item was taken...", yourRole: "Prosecution Counsel" },
+                { id: 1, title: "Theft by Trick", description: "Distinguish between theft and deception.", subject: "Indian Penal Code", difficulty: "Easy", facts: "A valuable item was taken...", yourRole: "Prosecution Counsel" },
+                { id: 2, title: "The Unpaid Invoice Dispute", description: "Is the supplier entitled to interest on delayed payment?", subject: "Contract Act", difficulty: "Easy", facts: "A supplier delivered goods on time, but the buyer delayed payment by 4 months without justification.", yourRole: "Supplier's Counsel" },
+                {id: 3,title: "The Late Rent Payment",description: "Is the tenant liable for a penalty?",subject: "Transfer of Property Act",difficulty: "Easy",facts: "A tenant paid rent 10 days late due to a bank strike, and the landlord charged a fixed late penalty mentioned in the lease agreement.",yourRole: "Tenant's Counsel"  },
+
+                { id: 4, title: "The Ambiguous Email Offer", description: "Was a valid contract formed?", subject: "Contract Act", difficulty: "Medium", facts: "An email was sent...", yourRole: "Plaintiff's Counsel" },
+                { id: 5, title: "The Vanishing Witness", description: "Does the absence of a key witness weaken the prosecution?", subject: "Indian Evidence Act", difficulty: "Medium", facts: "In a theft case, the only eyewitness moved abroad before trial and could not be cross-examined.", yourRole: "Defense Counsel" },
+                { id: 6, title: "The Altered Will", description: "Was the will forged or altered after signing?", subject: "Indian Succession Act", difficulty: "Medium", facts: "An elderly man’s will left property to his nephew, but a later version with a higher bequest to a neighbor surfaced after his death.", yourRole: "Nephew's Counsel" },
+                { id: 7, title: "The Collapsing Balcony", description: "Analyze the chain of negligence.", subject: "Law of Torts", difficulty: "Hard", facts: "A balcony collapsed...", yourRole: "Plaintiff's Counsel" },
+
+                { id: 8, title: "The Misplaced Trust Fund", description: "Did the trustee misuse the funds?", subject: "Indian Trusts Act", difficulty: "Hard", facts: "A trustee invested trust funds in a personal business without informing the beneficiaries, later claiming it was for their benefit.", yourRole: "Beneficiary's Counsel" },
+                {
+                    id:9, title: "The Poisoned Well", description: "Is the factory owner liable for environmental damage?", subject: "Environmental Protection Act", difficulty: "Hard", facts: "A factory's waste disposal methods contaminated a village’s groundwater, causing widespread illness.", yourRole: "Plaintiff's Counsel"
+                },
             ]);
             setIsLoading(false);
         }, 1500);
@@ -146,13 +155,13 @@ export default function Practices({ username, onLogout }) {
 
     return (
         <div className="page-container">
-            <header className="page-header">
+            {/* <header className="page-header">
                 <div>
                     <h1 className="header-logo">LegalMind<span>AI</span></h1>
                     <p className="header-welcome">Welcome, {username}</p>
                 </div>
                 <button onClick={onLogout} className="btn btn-logout">Logout</button>
-            </header>
+            </header> */}
             <main className="main-content">
                 <div className="selection-header">
                     <div>

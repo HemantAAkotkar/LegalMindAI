@@ -123,10 +123,10 @@ export default function ProfilePage({ onLogout }) {
     return (
         <div className="profile-page">
             {isEditing && <EditProfileModal user={profileData} onSave={handleSaveProfile} onCancel={() => setIsEditing(false)} />}
-            <header className="profile-header">
+            {/* <header className="profile-header">
                 <h1 className="header-logo">LegalMind<span>AI</span></h1>
                 <button onClick={logOut} className="btn logout-btn">Logout</button>
-            </header>
+            </header> */}
             <main className="profile-main">
                 <div className="profile-info">
                     <div className="profile-image-container">

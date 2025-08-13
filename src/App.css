@@ -2,6 +2,6 @@
   margin: 0;padding: 0;box-sizing: border-box;
 }
 body{
+  background-color: rgba(59, 28, 198, 0.333);
   min-height: 100vh;
-  background-color: rgba(22, 0, 119, 0.333);
 }

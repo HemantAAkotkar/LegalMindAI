@@ -1,0 +1,199 @@
+.resource-container {
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: #d1d5db;
+    font-family: sans-serif;
+}
+
+.header {
+    padding: 1rem;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.main-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.intro-desc {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    color: #9ca3af;
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.feature-card {
+    background-color: #1e293b;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    background-color: #334155;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+    color: #9ca3af;
+}
+
+.icon-green {
+    width: 2rem;
+    height: 2rem;
+    color: #4ade80;
+}
+
+.icon-blue {
+    width: 2rem;
+    height: 2rem;
+    color: #38bdf8;
+}
+
+.btn-center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.start-btn {
+    background-color: #38bdf8;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.start-btn:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* Cases List */
+.cases-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+.case-item:hover {
+    border-color: #38bdf8;
+    background-color: #334155;
+}
+
+@media (min-width: 640px) {
+    .case-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.case-title {
+    font-weight: bold;
+    color: white;
+}
+
+.case-summary {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.download-btn {
+    background-color: #0284c7;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #0369a1;
+}
+
+.download-icon {
+    width: 1rem;
+    height: 1rem;
+}
