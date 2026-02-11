@@ -87,12 +87,7 @@ export default function AboutUS({ onNavigate }) {
                 imageUrl="https://placehold.co/128x128/38bdf8/FFFFFF?text=HA"
                 initials="HA"
               />
-              <TeamMemberCard
-                name="Aniket Khatkhede"
-                role="Founder & Visionaryr"
-                imageUrl="https://placehold.co/128x128/38bdf8/FFFFFF?text=AK"
-                initials="AK"
-              />
+              
             </div>
           </section>
 
